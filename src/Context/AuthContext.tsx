@@ -29,10 +29,10 @@ const AuthProvider = ({ children }: ProviderProps) => {
 
   const logoutHandler = () => {
     localStorage.removeItem('userData');
-    navigate("/login");
+    navigate("/");
     setUser({} as UserData)
   };
-  
+
   return (
     <AuthContext.Provider
       value={{ user, setUser, loginHandler, logoutHandler }}
