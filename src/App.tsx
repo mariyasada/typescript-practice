@@ -1,12 +1,13 @@
-import React from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <Routes>
+        <Route path="/" element={<Login/>}></Route>
+      </Routes>
     </div>
   );
 }

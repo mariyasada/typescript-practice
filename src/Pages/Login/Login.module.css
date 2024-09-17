@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 1rem;
+    background: white;
+    box-shadow: 3px 4px 5px gray;
+    border-radius: 20px;
+    margin-top: 10rem;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+}
+.btn{
+    width: 7rem;
+    margin: auto;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 7px;
+}
+input{
+    width: 300px;
+    padding: 7px;
+  
+}
+.passwordinput{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    top:9.2rem;
+    right:1rem;
+    cursor: pointer;
+}
