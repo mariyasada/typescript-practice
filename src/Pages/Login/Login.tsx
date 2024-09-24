@@ -38,7 +38,7 @@ const Login = () => {
   };
   return (
     <div className={style.container}>
-      <h2>Login Page</h2>
+      <h2>Login Pagee</h2>
       <div className={style.inputContainer}>
         <div>
           <p>Email</p>
