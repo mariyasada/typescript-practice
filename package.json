@@ -2,7 +2,7 @@
   "name": "typescript-practice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mariyasada.github.io/sevencortypescript-practice",
+  "homepage": "https://mariyasada.github.io/typescript-practice",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
