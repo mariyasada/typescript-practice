@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { Actions } from "./actions/actions"
+import { Actions, filterActions } from "./actions/actions"
 
 export type UserData={
     email:string,
@@ -35,7 +35,10 @@ export type productContextType={
     products:Product[],
     setProducts:React.Dispatch<React.SetStateAction<Product[]>>,
     loading:boolean,
-    setLoading:React.Dispatch<React.SetStateAction<boolean>>
+    setLoading:React.Dispatch<React.SetStateAction<boolean>>,
+    filterState:filterinitialState,
+    filterDispatch:React.Dispatch<filterActions>,
+    showProductList:Product[]
 }
 
 export type cartState={
@@ -47,3 +50,10 @@ export type CartContextType={
     dispatch:React.Dispatch<Actions>
 }
 
+ export type filterinitialState= {
+    sortByCategory: string[];
+    sortByPrice:string ;
+    sortByRating:   string[];
+  };
+
+  export type FilterFunction = (state: filterinitialState, products: Product[]) => Product[];

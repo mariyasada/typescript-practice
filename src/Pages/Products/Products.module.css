@@ -4,3 +4,9 @@
     margin-top: 7rem;
     gap:3rem;
 }
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    
+}
