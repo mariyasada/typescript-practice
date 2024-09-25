@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { Actions } from "./actions/actions"
 
 export type UserData={
     email:string,
@@ -23,6 +24,7 @@ export type Product={
     description:string,
     category:string,
     image:string,
+    qty:number,
     rating:{
         rate:number,
         count:number
@@ -35,3 +37,13 @@ export type productContextType={
     loading:boolean,
     setLoading:React.Dispatch<React.SetStateAction<boolean>>
 }
+
+export type cartState={
+    cartList: Product[],
+    wishList:Product[]
+}
+export type CartContextType={
+    state:cartState,
+    dispatch:React.Dispatch<Actions>
+}
+

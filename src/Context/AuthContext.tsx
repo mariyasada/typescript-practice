@@ -6,7 +6,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const AuthProvider = ({ children }: ProviderProps) => {
   const [user, setUser] = useState<UserData>({} as UserData);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let userFromLocalStorage = localStorage.getItem("userData");
@@ -22,15 +22,16 @@ const AuthProvider = ({ children }: ProviderProps) => {
     }
   }, []);
 
-  const loginHandler = (data: UserData) => {
-    localStorage.setItem("userData",JSON.stringify(data))
-    navigate("/productpage")
+  var loginHandler = (data: UserData) => {
+    localStorage.setItem("userData", JSON.stringify(data));
+    setUser(data);
+    navigate("/");
   };
 
   const logoutHandler = () => {
-    localStorage.removeItem('userData');
-    navigate("/");
-    setUser({} as UserData)
+    localStorage.removeItem("userData");
+    navigate("/login");
+    setUser({} as UserData);
   };
 
   return (
