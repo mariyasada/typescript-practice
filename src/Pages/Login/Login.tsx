@@ -38,7 +38,7 @@ const Login = () => {
   };
   return (
     <div className={style.container}>
-      <h2>Login Pagee</h2>
+      <h2>Login Page</h2>
       <div className={style.inputContainer}>
         <div>
           <p>Email</p>
@@ -65,7 +65,11 @@ const Login = () => {
       <button className={style.btn} onClick={submitHandler}>
         Login
       </button>
-      <div style={{color:"red"}}>{err?.map((error)=><span>{error}</span>)}</div>
+      <div style={{ color: "red" }}>
+        {err?.map((error) => (
+          <span>{error}</span>
+        ))}
+      </div>
     </div>
   );
 };
